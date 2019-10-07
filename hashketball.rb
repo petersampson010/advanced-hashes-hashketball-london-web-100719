@@ -218,6 +218,7 @@ end
 
 def most_points_scored 
   hash = game_hash
+<<<<<<< HEAD
   $pointsvar = 0 
   hash.each do |h_a, h_a_hash|
     hash[h_a][:players].each do |player, stats|
@@ -294,6 +295,24 @@ def long_name_steals_a_ton?
     return false 
   end 
 end 
+=======
+  pointsvar = 0 
+  end_result = 0
+  hash.each do |h_a, h_a_hash|
+    hash[h_a][:players].each do |player, stats|
+      pointsvar = 0 
+      if hash[h_a][:players][player][:points] > pointsvar
+        (pointsvar = hash[h_a][:players][player][:points]) && (end_result = player)
+      end 
+    end 
+  end 
+  return end_result
+end 
+
+
+    
+  
+>>>>>>> 02c4dd75947a566d9d039b0d7e913b79f9aa9d95
 
 
 
